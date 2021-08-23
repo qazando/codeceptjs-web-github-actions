@@ -22,10 +22,6 @@ exports.config = {
   mocha: {},
   name: 'curso-codeceptjs-matiana',
   plugins: {
-    wdio: {
-      enabled: true,
-      services: ['selenium-standalone']
-    },
     pauseOnFail: {},
     retryFailedStep: {
       enabled: true
