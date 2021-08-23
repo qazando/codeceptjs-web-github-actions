@@ -11,7 +11,7 @@ exports.config = {
     Playwright: {
       url: 'http://automationpractice.com/index.php',
       browser: 'chromium',
-      show: true
+      show: false
     }
   },
   include: {
