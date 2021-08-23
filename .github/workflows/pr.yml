@@ -7,34 +7,29 @@ on:
   pull_request:
     branches: [ main ]
 
-  workflow_dispatch:
-
 jobs:
-  build:
+  e2e-tests:
     runs-on: ubuntu-latest
     
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [12.x]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checkout  do codigo do projeto
       - name: Checkout
         uses: actions/checkout@v2 
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.2.0
-        with:
-          node-version: ${{ matrix.node-version }}
+      # - name: Setup Node.js environment
+      #   uses: actions/setup-node@v2.2.0
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
     
       - name: Install dependecies
         run: | 
           npm install
-          npx playwright install
       
-      - uses: microsoft/playwright-github-action@v1
+      - name: Setup Playwright    
+        uses: microsoft/playwright-github-action@v1
+
       - name: run CodeceptJS tests
         run: npx codeceptjs run
 
