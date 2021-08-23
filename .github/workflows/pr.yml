@@ -20,11 +20,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Setup timezone
-        uses: zcong1993/setup-timezone@master
-        with:
-          timezone: Brazil/East  
-
       # Checkout  do codigo do projeto
       - name: Checkout
         uses: actions/checkout@v2 

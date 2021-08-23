@@ -10,7 +10,7 @@ exports.config = {
   helpers: {
     Playwright: {
       url: 'http://automationpractice.com/index.php',
-      browser: 'chrome',
+      browser: 'chromium',
       show: true
     }
   },
