@@ -2,8 +2,8 @@
 name: PR - Automations Testes Clients APP
 
 on:
-  # push:
-  #   branches: [ main ]
+  push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
