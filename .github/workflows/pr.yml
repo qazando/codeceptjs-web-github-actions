@@ -37,8 +37,8 @@ jobs:
       - name: Install dependecies
         run: npm install
       
-      - name: run CodeceptJS tests
-        uses: microsoft/playwright-github-action@v1
-        run: npx codeceptjs run
+      # - name: run CodeceptJS tests
+      #   uses: microsoft/playwright-github-action@v1
+      #   run: npx codeceptjs run
 
           
