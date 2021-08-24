@@ -9,9 +9,9 @@ exports.config = {
   output: './output',
   helpers: {
     Playwright: {
-      url: 'http://automationpractice.com/index.php',
+      url: 'http://www.google.com',
       browser: 'chromium',
-      show: false
+      show: true
     }
   },
   include: {
