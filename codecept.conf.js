@@ -11,7 +11,7 @@ exports.config = {
     Playwright: {
       url: 'http://www.google.com',
       browser: 'chromium',
-      show: true
+      show: false
     }
   },
   include: {
